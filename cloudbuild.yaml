@@ -1,0 +1,19 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - "pull"
+      - "docker.io/akashdeepbal/akashdeep-flask-backend:latest" # Pulling the image from Docker Hub
+
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      - "compute"
+      - "instances"
+      - "update-container"
+      - "akashdeep-flask-backend-instance"
+      - "--container-image"
+      - "docker.io/akashdeepbal/akashdeep-flask-backend:latest" # Using Docker Hub image directly
+      - "--zone"
+      - "northamerica-northeast2-a"
+
+options:
+  logging: CLOUD_LOGGING_ONLY
