@@ -9,7 +9,7 @@ steps:
       - "compute"
       - "instances"
       - "update-container"
-      - "akashdeep-flask-backend-instance"
+      - "khan-flask-backend-instance"
       - "--container-image"
       - "docker.io/umar010/khan-flask-backend:latest" # Using Docker Hub image directly
       - "--zone"
