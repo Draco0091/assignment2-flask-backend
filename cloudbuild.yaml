@@ -2,7 +2,7 @@ steps:
   - name: "gcr.io/cloud-builders/docker"
     args:
       - "pull"
-      - "docker.io/akashdeepbal/akashdeep-flask-backend:latest" # Pulling the image from Docker Hub
+      - "docker.io/umar010/khan-flask-backend:latest" # Pulling the image from Docker Hub
 
   - name: "gcr.io/cloud-builders/gcloud"
     args:
@@ -11,7 +11,7 @@ steps:
       - "update-container"
       - "akashdeep-flask-backend-instance"
       - "--container-image"
-      - "docker.io/akashdeepbal/akashdeep-flask-backend:latest" # Using Docker Hub image directly
+      - "docker.io/umar010/khan-flask-backend:latest" # Using Docker Hub image directly
       - "--zone"
       - "northamerica-northeast2-a"
 
